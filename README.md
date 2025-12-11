@@ -34,7 +34,7 @@ To build a machine learning model that predicts the best crop for a given set of
 * **Accuracy:** ~99.3%
 * **Saved model:** `crop_model.pkl`
 
-The Random Forest model was chosen because it performs well on tabular data, handles nonlinear patterns, and provides built-in feature importance.
+The Random Forest model was chosen because it performs well on tabular data, handles nonlinear relationships, and provides built-in feature importance.
 
 ---
 
@@ -43,21 +43,28 @@ The Random Forest model was chosen because it performs well on tabular data, han
 To understand **why** the model predicts a particular crop:
 
 * Used **TreeExplainer** from the SHAP library
-* Aggregated multiclass SHAP values for global sensitivity
-* Visualized:
+* Aggregated multiclass SHAP values for global interpretation
+* Generated model explainability visualizations shown below:
 
-  * **SHAP summary plot** (`shap_summary.png`)
-  * **Feature importance plot** (`feature_importance.png`)
+### 🔹 SHAP Summary Plot
 
-These visualizations show how each feature influences the model's predictions.
+Shows how each feature influenced the model's predictions across the dataset.
+
+![SHAP Summary Plot](shap_summary.png)
+
+### 🔹 Random Forest Feature Importance
+
+Shows the overall importance of each feature used by the model.
+
+![Feature Importance Plot](feature_importance.png)
 
 ---
 
 ## 📈 Key Insights
 
-* **Rainfall** and **Humidity** strongly influence crop suitability.
-* **pH** is an important environmental factor.
-* N, P, and K nutrients affect crops differently depending on their biology.
+* **Rainfall** and **Humidity** strongly influence crop suitability
+* **pH** is a major environmental factor in crop performance
+* Soil nutrients (N, P, K) affect crops differently depending on their biological needs
 
 ---
 
@@ -113,5 +120,4 @@ jupyter notebook
 **Completed** — Machine Learning + Explainability + Visualizations + Documentation.
 
 ---
-
 
